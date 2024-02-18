@@ -1,6 +1,13 @@
 <html>
+ <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+ </head>
  <body class="p-4">
   <style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap')
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap')
+  * {font-family: "IBM Plex Sans",sans-serif;}
+  .font-mono {font-family: "IBM Plex Mono",monospace !important; }
   * {color-scheme:dark;}
   li b {transition: all 250ms;}
   li:hover b {padding-left:8px;transition: all 250ms;color:#3B82F6;}
@@ -14,13 +21,14 @@
     let htmlString = '<ul>';
 
     for (let file of data) {
-     htmlString += `<li class=" w-fit min-w-[300px] font-mono text-gray-400 hover:text-sky-200 duration-200 hover:bg-white/10"><a href="${file.path}"><b class="text-blue-300"> - </b> <span class="hover:underline duration-300">${file.name}</span></a></li>`;
+     htmlString += `<li class=" w-fit min-w-[320px] font-mono text-gray-400 hover:text-sky-200 duration-200 hover:bg-white/10 hover:py-0.5 hover:pr-2"><a href="${file.path}"><b class="text-blue-300"> - </b> <span class="hover:underline duration-300">${file.name}</span></a></li>`;
     }
 
     htmlString += '</ul>';
     document.getElementsByTagName('body')[0].innerHTML += htmlString;
+    document.getElementsByTagName('body')[0].innerHTML += `<br><span class="text-gray-400 text-sm">Total file count: <b class="text-gray-300 font-mono">${data.length}</b></span>`;
    })()
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
+
  <body>
 </html>
