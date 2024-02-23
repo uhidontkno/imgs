@@ -27,9 +27,9 @@
 
     htmlString += '</ul>';
     document.getElementsByTagName('body')[0].innerHTML += htmlString;
-    document.getElementsByTagName('body')[0].innerHTML += `<br><span class="text-gray-400 text-sm">Total file count: <b class="text-gray-300 font-mono">${data.length}</b> </span><br><a class="text-sky-300 hover:text-sky-400 hover:underline href="https://github.com/uhidontkno/imgs">Open source on <b>GitHub!</b></a>`;
+    document.getElementsByTagName('body')[0].innerHTML += `<br><span class="text-gray-400 text-sm">Total file count: <b class="text-gray-300 font-mono">${data.length}</b> </span><br><a class="text-sky-300 hover:text-sky-400 hover:underline" href="https://github.com/uhidontkno/imgs">Open source on <b>GitHub!</b></a>`;
 } else {
-document.getElementsByTagName('body')[0].innerHTML += `<br><span class="text-red-400 text-xl">The directory does not exist.</span><br><a class="text-sky-300 hover:text-sky-400 hover:underline href="https://github.com/uhidontkno/imgs">Open source on <b>GitHub!</b></a>`;
+document.getElementsByTagName('body')[0].innerHTML += `<br><span class="text-red-400 text-xl">The directory does not exist.</span><br><a class="text-sky-300 hover:text-sky-400 hover:underline" href="https://github.com/uhidontkno/imgs">Open source on <b>GitHub!</b></a>`;
 }
    })()
   </script>
